@@ -21,8 +21,8 @@ Build an image using the Dockerfile from the current directory
 
 
 ```
-docker build -t python-helloworld .{{execute}}
-```
+docker build -t python-helloworld .
+```{{execute}}
 
 Before distributing the Docker image to a wider audience, it is paramount to test it locally and verify if it meets the expected behavior. To create a container using an available Docker image, the docker run command is available. Below is the syntax for this command:
 
