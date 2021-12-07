@@ -1,8 +1,3 @@
-# Heading for Step 1
+# Introduction to the environment
 
-This is some text.
-
-Here's a single line of runnable code:
-
-`printf 'Hello, world!\n\n'`{{execute}}
-
+This is a ubuntu environment, docker pre installed
