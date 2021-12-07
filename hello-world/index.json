@@ -1,6 +1,6 @@
 {
-  "title": "New Scenario Template",
-  "description": "A simple scenario example.",
+  "title": "Introduction to docker",
+  "description": "A simple docker scenario.",
   "difficulty": "Beginner",
   "time": "3 minutes",
   "details": {
