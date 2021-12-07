@@ -20,8 +20,8 @@ For example, to build the image of the Python hello-world application from the D
 Build an image using the Dockerfile from the current directory
 
 
-```python
-! docker build -t python-helloworld .
+```
+docker build -t python-helloworld .{{execute}}
 ```
 
 Before distributing the Docker image to a wider audience, it is paramount to test it locally and verify if it meets the expected behavior. To create a container using an available Docker image, the docker run command is available. Below is the syntax for this command:
@@ -47,9 +47,9 @@ For example, to run the Python hello-world application, using the created image,
 Note: To access the application in a browser, we need to bind the Docker container port to a port on the host or local machine. In this case, 5111 is the host port that we use to access the application e.g. http://127.0.0.1:5111/. The 5000 is the container port that the application is listening to for incoming requests. 
 
 
-```python
+```
 # run the `python-helloworld` image, in detached mode and expose it on port `5111`
-! docker run -d -p 5111:5000 python-helloworld
+docker run -d -p 5111:5000 python-helloworld
 ```
 
 To retrieve the Docker container logs use the docker logs {{ CONTAINER_ID }} command. For example:
@@ -57,13 +57,13 @@ To retrieve the Docker container logs use the docker logs {{ CONTAINER_ID }} com
 ```docker logs 95173091eb5e```
 
 
-```python
-! docker ps 
+```
+docker ps 
 ```
 
 
-```python
-! docker logs 2e5d26ffaa1c   
+```
+docker logs 2e5d26ffaa1c   
 ```
 
 ## Package docker image and distribute it
@@ -86,11 +86,11 @@ For example, to tag the Python hello-world application, to be pushed to a reposi
 Replace `pixelpotato` with your docker hub name
 
 
-```python
+```
 # tag the `python-helloworld` image, to be pushed 
 # in the `pixelpotato` repository, with the `python-helloworld` image name
 # and version `v1.0.0`
-! docker tag python-helloworld pixelpotato/python-helloworld:v1.0.0
+docker tag python-helloworld pixelpotato/python-helloworld:v1.0.0
 ```
 
 Once the image is tagged, the final step is to push the image to a registry. For this purpose, the docker push command can be used. Below is the syntax for this command:
@@ -104,7 +104,7 @@ docker push NAME[:TAG]
 For example, to push the Python hello-world application to DockerHub, the following command can be used:
 
 
-```python
+```
 # push the `python-helloworld` application in version v1.0.0 
 # to the `pixelpotato` repository in DockerHub
 !docker push pixelpotato/python-helloworld:v1.0.0
